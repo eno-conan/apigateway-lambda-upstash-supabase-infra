@@ -1,15 +1,15 @@
 # apigateway-lambda-upstash-supabase-infra
 
 ### 詳細について
-- [詳細はこちらの記事で公開しています。]()
+- [詳細はこちらの記事で公開しています。](https://qiita.com/eno49conan/items/6d3e98df2ac82613c3b3)
 
 ### フォルダ構成の説明
 - ecr-lambda/
-  - FastAPIのアプリケーションのイメージを配置するためのリポジトリ作成用コード。こちらを先に構築する必要があります。
+  - FastAPIのアプリケーションのイメージ配置のリポジトリ作成用コード。こちらを先に構築します。
 - serverless-app/
-  - APIGateway,Lambda関数
+  - APIGateway、Lambda関数、IAMロール、SecretManagerのリソース作成用コード
 
-### アプリケーション起動（ローカル環境）
+### スタックの反映
 ```bash
-uvicorn src.main:app --reload
+cdk deploy
 ```
